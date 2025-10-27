@@ -32,14 +32,26 @@ A utility app to generate secure, customizable passwords based on user preferenc
 
 ---
 
+### 3. Luxora Real Estate
+
+A modern and responsive real estate web application built with React and Vite.
+It showcases elegant property listings, smooth navigation, and a fast user experience — designed to help users explore homes, apartments, and luxury spaces effortlessly.
+
+**Concepts Used:**
+
+- Component-based architecture
+- Routing and page structure
+- Reusable UI components
+- Props and state management
+
+ Folder: `luxora-real-estate/`
+
 ## How to Run Locally
 
 1. **Clone the repo**
    ```bash
     git clone https://github.com/<your-username>/react-mini-projects.git
     cd react-mini-projects
-    cd react-mini-projects
-
 
 2. **Navigate to a project folder**
 
