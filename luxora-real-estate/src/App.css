@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Raleway&family=Rufina:wght@700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+}
+
+.italic {
+    font-family: "Playfair Display", serif;
+}
+
+h1 {
+    font-size: 60px;
+    font-family: "Rufina", serif;
+    text-align: center;
+}
+
+h2 {
+    font-size: 52px;
+    font-family: "Rufina", serif;
+    text-align: center;
+}
+
+h3 {
+    font-size: 44px;
+    font-family: "Rufina", serif;
+    text-align: center;
+}
+
+h4 {
+    font-size: 32px;
+    font-family: "Rufina", serif;
+    text-align: center;
+}
+
+h5 {
+    font-size: 24px;
+    font-family: "Rufina", serif;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 44px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 32px;
+    }
+
+    h4 {
+        font-size: 26px;
+    }
+
+    h5 {
+        font-size: 22px;
+    }
+}
+
+.page {
+    background: #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/******************************NAVBAR STYLING***********************************************/
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 75px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #00000073;
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav .logo {
+    font-size: 28px;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.nav ul {
+    display: flex;
+    gap: 55px;
+}
+
+.nav ul a {
+    text-decoration: none;
+    color: #c8c8c8;
+    position: relative;
+}
+
+.nav ul a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    height: 1.5px;
+    background: #ffffff;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.nav ul a:hover::before {
+    left: 0;
+    transition: 0.3s;
+}
+
+@media (max-width: 900px) {
+    .nav {
+        padding: 17px 35px;
+    }
+
+    .nav ul {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 750px) {
+    .hamburger {
+        display: flex;
+        font-size: 35px;
+        color: #c8c8c8;
+    }
+
+    .nav {
+        padding: 20px;
+        flex-wrap: wrap;
+        height: 75px;
+        transition: 0.3s;
+    }
+
+    .nav .logo {
+        font-size: 20px;
+    }
+
+    .nav ul {
+        order: 3;
+        width: 100%;
+        flex-direction: column;
+        gap: 25px;
+        padding: 30px 0;
+        display: none;
+    }
+
+    .show {
+        height: fit-content;
+        transition: 0.3s;
+    }
+
+    .show ul {
+        display: flex;
+    }
+}
+
+@media (max-width: 610px) {
+    #hero p {
+        font-size: 20px !important;
+    }
+}
+
+@media (max-width: 475px) {
+    #hero p {
+        font-size: 15px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    #hero p {
+        font-size: 17px !important;
+        text-align: center;
+    }
+}
