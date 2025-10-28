@@ -3,6 +3,7 @@ import HeroSection from '../subComponents/HeroSection';
 import TopVillas from '../subComponents/TopVillas';
 import Regions from '../subComponents/Regions';
 import OurSpecialities from '../subComponents/OurSpecialities';
+import Host from '../subComponents/Host';
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
                 <TopVillas />
                 <Regions />
                 <OurSpecialities />
+                <Host />
             </article>
         </>
     )

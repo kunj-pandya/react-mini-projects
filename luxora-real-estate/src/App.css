@@ -582,6 +582,54 @@ h5 {
 }
 
 
+/***************************HOST STYLING*********************************************/
+#host {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 75px 20px;
+    border-bottom-right-radius: 100px;
+    height: 600px;
+    background: url(/host2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#host .container {
+    background: #ffffff;
+    width: 450px;
+    height: fit-content;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+#host .container button {
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: #5b656f;
+    color: #ffffff;
+    width: 100%;
+    padding: 7px;
+    border: none;
+}
+
+@media (max-width: 495px) {
+    #host {
+        padding: 50px 20px;
+    }
+
+    #host .container {
+        width: 100%;
+    }
+}
+
 
 /***********************************FOOTER STYLING**************************************************/
 .otherPage_footer {
