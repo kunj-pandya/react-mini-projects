@@ -1,8 +1,13 @@
-import React from 'react'
+import React from 'react';
+import HeroSection from '../subComponents/HeroSection';
 
 const Home = () => {
     return (
-        <div></div>
+        <>
+            <article className='page'>
+                <HeroSection />
+            </article>
+        </>
     )
 }
 
