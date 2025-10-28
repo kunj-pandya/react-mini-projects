@@ -2,6 +2,7 @@ import React from 'react';
 import HeroSection from '../subComponents/HeroSection';
 import TopVillas from '../subComponents/TopVillas';
 import Regions from '../subComponents/Regions';
+import OurSpecialities from '../subComponents/OurSpecialities';
 
 const Home = () => {
     return (
@@ -10,6 +11,7 @@ const Home = () => {
                 <HeroSection />
                 <TopVillas />
                 <Regions />
+                <OurSpecialities />
             </article>
         </>
     )
