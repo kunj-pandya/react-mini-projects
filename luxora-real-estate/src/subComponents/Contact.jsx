@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { RiFacebookBoxLine, RiYoutubeLine, RiGithubLine } from "react-icons/ri";
+
 const SubContact = () => {
     return (
         <>
@@ -14,7 +15,7 @@ const SubContact = () => {
                         </div>
                         <div>
                             <p>Email</p>
-                            <span>kunjpadnya998@gmail.comfort</span>
+                            <span>kunjpadnya998@gmail.com</span>
                         </div>
                         <div>
                             <p>Address</p>
