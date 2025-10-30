@@ -27,7 +27,7 @@ function App() {
     if (!fromData.email.includes("@")) {
       newErros.email = "please enter valid email";
     }
-    if (!fromData.password && fromData.password.length < 6) {
+    if (!fromData.password && fromData.password.length < 8) {
       newErros.password = "password must be 8 characters long"
     }
 
@@ -47,57 +47,60 @@ function App() {
   }
 
   return (
-    <div>
-
-      <h2>Login From</h2>
-
+    <div className="app">
       <form
         onSubmit={handleSubmit}
+        className="form-container"
       >
+        <h2>Login From</h2>
+        <hr />
 
         {/* NAME FIELD */}
-        <div>
+        <div className="form-group">
           <label>Name</label>
           <input
             type="text"
             name="name"
             value={fromData.name}
             onChange={handleChange}
+            className="form-input"
           />
-          {errors.name && <p>{errors.name}</p>}
+          {errors.name && <p className="error">{errors.name}</p>}
         </div>
 
 
         {/* EMAIL FIELD */}
-        <div>
+        <div className="form-group">
           <label>Email</label>
           <input
             type="email"
             name="email"
             value={fromData.email}
             onChange={handleChange}
+            className="form-input"
           />
-          {errors.email && <p>{errors.email}</p>}
+          {errors.email && <p className="error">{errors.email}</p>}
         </div>
 
         {/* PASSWORD FIELD */}
-        <div>
+        <div className="form-group">
           <label>Password</label>
           <input
             type="password"
             name="password"
             value={fromData.password}
             onChange={handleChange}
+            className="form-input"
           />
-          {errors.password && <p>errors.password</p>}
+          {errors.password && <p className="error">{errors.password}</p>}
         </div>
-        
+
         <button
           type="submit"
+          className="submit-btn"
         >
           Submit
         </button>
-
       </form>
 
     </div>
