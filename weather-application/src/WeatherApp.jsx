@@ -7,7 +7,8 @@ const WeatherApp = () => {
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState("");
 
-  const API_KEY = "b3fce4e5ce28bf86c5bed03d1f717a42";
+  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
+  const BASE_URL = import.meta.env.VITE_WEATHER_API_URL;
 
   const getWeather = async () => {
     if (!city) return;
@@ -16,7 +17,7 @@ const WeatherApp = () => {
       setError("");
 
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`
+        `${BASE_URL}?q=${city}&units=metric&appid=${API_KEY}`
       );
 
       if (!response.ok) {
