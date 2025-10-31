@@ -63,6 +63,10 @@ const App = () => {
     }
   };
 
+  const clearAll = () => {
+    setTodos([]);
+  };
+
   return (
     <div>
 
@@ -83,6 +87,12 @@ const App = () => {
           onClick={addTodo}
         >
           Add
+        </button>
+
+        <button
+          onClick={clearAll}
+        >
+          Clear All
         </button>
 
       </div>
