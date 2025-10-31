@@ -58,7 +58,7 @@ const App = () => {
   };
 
   return (
-    <di>
+    <div>
 
       <h1>To-Do List</h1>
 
@@ -143,7 +143,7 @@ const App = () => {
         )}
       </ul>
 
-    </di>
+    </div>
   )
 }
 
