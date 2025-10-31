@@ -9,6 +9,9 @@ const App = () => {
     return saved ? JSON.parse(saved) : [];
   })
 
+  const [isEditing, setIsEditing] = useState(null); // stores the id of text that we are editing
+  const [editText, setEditText] = useState(""); // new text
+
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos));
   }, [todos]);
@@ -36,12 +39,25 @@ const App = () => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
+  const editTodo = (id, currentText) => {
+    setIsEditing(id);
+    setEditText(currentText);
+  }
+
+  const saveEdit = (id) => {
+    setTodos(todos.map((todo) => todo.id === id ? { ...todo, text: editText } : todo));
+
+    setIsEditing(null);
+    setEditText("");
+  };
+
   return (
     <di>
 
       <h1>To-Do List</h1>
 
       <div>
+
         <input
           type='text'
           placeholder='Enter a task ....'
@@ -49,31 +65,71 @@ const App = () => {
           onChange={(e) => setTask(e.target.value)}
           className="input-box"
         />
-        <button onClick={addTodo}>Add</button>
+
+        <button
+          onClick={addTodo}
+        >
+          Add
+        </button>
+
       </div>
 
-      <ul >
-
+      <ul>
         {todos.length === 0 ? (
+
           <p className="empty-text">No tasks yet</p>
+
         ) : (
+
           todos.map((todo) => (
 
             <li
               key={todo.id}
             >
-              <span
-                onClick={() => toggleComplete(todo.id)}
-                className={todo.completed ? "completed" : ""}
-              >
-                {todo.text}
-              </span>
 
-              <button
-                onClick={() => deleteTodo(todo.id)}
-              >
-                delete
-              </button>
+              {isEditing === todo.id ? (
+                <>
+
+                  <input
+                    type='text'
+                    value={editText}
+                    onChange={(e) => setEditText(e.target.value)}
+                  />
+
+                  <button
+                    onClick={() => saveEdit(todo.id)}
+                  >
+                    Save
+                  </button>
+
+                </>
+              ) : (
+                <>
+                  <span
+                    onClick={() => toggleComplete(todo.id)}
+                    className={todo.completed ? "completed" : ""}
+                  >
+                    {todo.text}
+                  </span>
+
+                  <div>
+
+                    <button
+                      onClick={() => editTodo(todo.id, todo.text)}
+                    >
+                      Edit
+                    </button>
+
+                    <button
+                      onClick={() => deleteTodo(todo.id)}
+                    >
+                      delete
+                    </button>
+                  </div>
+                </>
+              )}
+
+
 
             </li>
           ))
