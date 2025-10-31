@@ -26,7 +26,8 @@ A utility app to generate secure, customizable passwords based on user preferenc
 - React state and form handling  
 - Conditional rendering  
 - Clipboard API (`navigator.clipboard.writeText`)  
-- Input range and checkbox controls  
+- Input range and checkbox controls
+- used Hooks `useState`, `useCallback`, `useEffect`, `useRef`  
 
  Folder: `password-generator/`
 
@@ -46,6 +47,51 @@ It showcases elegant property listings, smooth navigation, and a fast user exper
 
  Folder: `luxora-real-estate/`
 
+---
+
+ ### 4. To-Do List
+A simple and interactive to-do list app that helps users manage daily tasks.  
+Users can add, mark as complete, or delete tasks — demonstrating the power of React’s reactivity and conditional rendering.
+
+**Concepts Used:**
+- `useState` for task management  
+- Conditional rendering for completed tasks  
+- Dynamic list rendering with `.map()`  
+- Local state updates and user interactivity  
+
+Folder: `to-do-list/`
+
+---
+### 5. Form Validation App
+A user-friendly form with real-time validation logic to ensure accurate input before submission.  
+This project demonstrates custom validation logic without relying on HTML’s default `required` behavior.
+
+**Concepts Used:**
+- Controlled components (`value` and `onChange`)  
+- Custom validation for email and password fields  
+- Dynamic error messages  
+- Conditional rendering for validation feedback  
+- Hooks: `useState`, `useEffect`  
+
+Folder: `form-validation/`
+
+---
+
+### 6. Weather Application
+A sleek and modern weather app that fetches real-time weather data using the **OpenWeatherMap API**.  
+It allows users to search any city and view its current temperature and weather conditions, with a dark and minimal UI built using Tailwind CSS.
+
+**Concepts Used:**
+- `useState` for city, weather, and error state  
+- `fetch()` and `async/await` for API calls  
+- Conditional rendering for data display  
+- Error handling for invalid cities  
+- Secure API key storage using `.env`  
+- Tailwind CSS for modern dark theme styling  
+
+Folder: `weather-application/`
+
+---
 ## How to Run Locally
 
 1. **Clone the repo**
