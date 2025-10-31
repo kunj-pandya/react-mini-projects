@@ -57,6 +57,12 @@ const App = () => {
     }
   };
 
+  const enterEditTodoKey = (e, id) => {
+    if (e.key === "Enter") {
+      saveEdit(id);
+    }
+  };
+
   return (
     <div>
 
@@ -101,6 +107,7 @@ const App = () => {
                     type='text'
                     value={editText}
                     onChange={(e) => setEditText(e.target.value)}
+                    onKeyDown={(e) => enterEditTodoKey(e, todo.id)}
                   />
 
                   <button
