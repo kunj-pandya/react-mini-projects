@@ -51,6 +51,12 @@ const App = () => {
     setEditText("");
   };
 
+  const enterTodoKey = (e) => {
+    if (e.key === "Enter") {
+      addTodo();
+    }
+  };
+
   return (
     <di>
 
@@ -64,6 +70,7 @@ const App = () => {
           value={task}
           onChange={(e) => setTask(e.target.value)}
           className="input-box"
+          onKeyDown={enterTodoKey}
         />
 
         <button
