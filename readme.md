@@ -92,6 +92,23 @@ It allows users to search any city and view its current temperature and weather 
 Folder: `weather-application/`
 
 ---
+
+ ### 7. Accordion Component
+An elegant and interactive Accordion App built with React and Tailwind CSS.
+It displays a list of FAQs where users can expand or collapse each question to reveal its answer, featuring smooth transitions and a modern design.
+
+**Concepts Used:**
+- useState for managing active accordion item
+- Conditional rendering for toggling answers
+- Reusable Accordion component pattern
+- Event handling for open/close logic
+- React Icons (FaChevronUp, FaChevronDown) for visual cues
+- Tailwind CSS for responsive and modern UI
+
+Folder: `accordion-app/`
+
+---
+
 ## How to Run Locally
 
 1. **Clone the repo**
