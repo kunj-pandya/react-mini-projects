@@ -129,7 +129,7 @@ Folder: `autocomplete-searchbar`
 
 1. **Clone the repo**
    ```bash
-    git clone https://github.com/<your-username>/react-mini-projects.git
+    git clone https://github.com/kunj-pandya/react-mini-projects.git
     cd react-mini-projects
 
 2. **Navigate to a project folder**
