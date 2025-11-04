@@ -1,16 +1,60 @@
-# React + Vite
+# 🍳 AutoComplete Recipe Search App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive **React.js** project that implements an **autocomplete search bar** to fetch and display recipe data from a public API.  
+The app features **debounced API calls**, **local caching**, and **click-based detail display** for selected recipes.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ ## 🖼 Screenshot of project
 
-## React Compiler
+![Autocompelte-Searchbar](project-screenshot/autocomplete-searchbar-react.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Features
+
+- **Live Search with Debounce**
+  - Fetches matching recipes as you type.
+  - Waits 300ms before fetching to reduce API calls.
+
+- **Caching for Faster Results**
+  - Stores previously searched results locally using state-based caching.
+
+- **Click-to-View Recipe Details**
+  - Displays recipe name, cuisine, and other details when a result is selected.
+
+- **Smart UI**
+  - Results box shows only when typing or focused.
+  - Results close automatically when clicked or blurred.
+
+---
+
+| **Fetch API** | To retrieve data from [DummyJSON Recipes API](https://dummyjson.com/docs/recipes) |
+
+---
+
+## **Main Functional Flow**
+
+1. User types in the input box → `input` state updates  
+2. `useEffect` triggers a **debounced API call** (after 300ms)  
+3. Results appear in the dropdown  
+4. User clicks a recipe → `selectedRecipe` updates and shows details  
+5. If a new search starts → previously selected recipe clears  
+
+---
+
+## **Important Functions**
+
+### `fetchData()`
+- Fetches recipes from the DummyJSON API.
+- Checks cache first to avoid unnecessary network calls.
+- Stores new results in both `results` and `cache`.
+
+### `handleSelectRecipe(recipe)`
+- Called when a user clicks a recipe from the dropdown.
+- Updates `selectedRecipe` and hides dropdown results.
+
+---
+
+
