@@ -109,6 +109,22 @@ Folder: `accordion-app/`
 
 ---
 
+### 8. AutoComplete Recipe Search App
+A simple and interactive React.js project that implements an autocomplete search bar to fetch and display recipe data from a public API.  
+It dynamically fetches and displays recipe suggestions from an API (https://dummyjson.com/recipes/search?q=) as the user types.
+Users can select a recipe from the search results to view its detailed information instantly.
+
+**Concepts Used:**
+
+- useState and useEffect for state and side-effect management
+- Debouncing using setTimeout for efficient API calls
+- Caching results to prevent redundant API requests
+- Conditional rendering for showing and hiding results dynamically
+- Event handling (onFocus, onBlur, and onMouseDown) for smooth UX
+- Dynamic data display on selecting a recipe
+
+Folder: `autocomplete-searchbar`
+
 ## How to Run Locally
 
 1. **Clone the repo**
